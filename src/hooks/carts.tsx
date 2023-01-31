@@ -13,15 +13,15 @@ export type countCart = {
 }
 
 type CartContextData = {
-  countCart:countCart[];
-  setCountCart: (countCart: countCart[]) => void;
+  countCart:any;
+  setCountCart: (countCart: any) => void;
 };
 
 
 const CartContext = createContext<CartContextData>({} as CartContextData);
 
 export const AuthProvider: React.FC<any> = ({ children }) => {
-  const [countCart, setCountCart] = useState<countCart[]>([]);
+  const [countCart, setCountCart] = useState<any[]>([]);
 
   return (
     <CartContext.Provider value={{ setCountCart, countCart }}>

@@ -36,7 +36,7 @@ const CardImagem = ({data}:CardImagem) => {
           'Você pode alterar a quantidade no carrinho',
       });
     } else {
-      setCountCart((old: countCart[]) => [...old, object]  as countCart[]);
+      setCountCart((old: any[]) => [...old, object]  as any[]);
     }
   };
 
